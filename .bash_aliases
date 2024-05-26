@@ -6,5 +6,10 @@ alias top="btm"
 alias ls="eza --color=always --long --no-filesize --no-time --tree --no-permissions --icons=always -a --git --git-repos-no-status --no-user -L=1"
 alias commit="git commit $@"
 alias cd="z"
+alias tmes="tmuxifier edit-session $@"
+alias tmew="tmuxifier edit-window $@"
+alias tmns="tmuxifier new-session $@"
+alias tmnw="tmuxifier new-window $@"
+alias tml="tmuxifier load-session $@"
 
 export HOMEBREW_NO_ENV_HINTS=true
