@@ -1,0 +1,7 @@
+import = ["~/.config/alacritty/catppuccin-frappe.toml"]
+
+[window]
+decorations = "Buttonless"
+
+[font]
+normal.family = "FiraMono Nerd Font Mono"
