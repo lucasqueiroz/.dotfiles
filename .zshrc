@@ -49,3 +49,7 @@ source ~/.oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+# Tmuxifier
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
