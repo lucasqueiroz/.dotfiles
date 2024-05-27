@@ -1,13 +1,12 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 export PATH="$PATH:/home/lucas/.local/bin"
 
+export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_DEFAULT_SESSION_NAME="workspace"
+
 export ZSH="$HOME/.oh-my-zsh"
 
-plugins=(git asdf brew zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git asdf brew zsh-autosuggestions zsh-syntax-highlighting tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,7 +43,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 eval "$(fzf --zsh)"
 
-autoload -U compinit; compinit
+# autoload -U compinit; compinit
 source ~/.oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 
 # Zoxide

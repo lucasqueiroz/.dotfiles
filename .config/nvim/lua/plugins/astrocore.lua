@@ -12,19 +12,6 @@ return {
           mouse = "nvi",
         },
       },
-      autocmds = {
-        autoopentree = {
-          {
-            event = "VimEnter",
-            group = "autoopentree",
-            callback = function()
-              -- vim.cmd("Neotree toggle")
-              vim.cmd.aunmenu([[PopUp.How-to\ disable\ mouse]])
-              vim.cmd.aunmenu([[PopUp.-1-]])
-            end
-          }
-        }
-      },
     },
   },
 }
