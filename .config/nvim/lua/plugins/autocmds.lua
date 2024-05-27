@@ -23,7 +23,6 @@ return {
             desc = "Restore previous directory",
             nested = true,
             callback = function()
-              vim.notify "Testing"
               local resession = require "resession"
               if vim.fn.argc(-1) == 0 then
                 resession.load(vim.fn.getcwd(), { dir = "dirsession", silence_errors = true })
