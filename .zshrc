@@ -1,3 +1,6 @@
+# Adds alias commands
+source ~/.bash_aliases
+
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 export PATH="$PATH:/home/lucas/.local/bin"
 
@@ -9,9 +12,6 @@ export ZSH="$HOME/.oh-my-zsh"
 plugins=(git asdf brew zsh-autosuggestions zsh-syntax-highlighting tmux)
 
 source $ZSH/oh-my-zsh.sh
-
-# Adds alias commands
-source ~/.bash_aliases
 
 # Enables Powerlevel10k
 source ~/powerlevel10k/powerlevel10k.zsh-theme
