@@ -1,6 +1,3 @@
-# Adds alias commands
-source ~/.bash_aliases
-
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 export PATH="$PATH:/home/lucas/.local/bin"
 
@@ -54,3 +51,6 @@ export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
 export EDITOR="nvim"
+
+# Adds alias commands
+source ~/.bash_aliases
