@@ -1,5 +1,4 @@
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
-export PATH="$PATH:/home/lucas/.local/bin"
 
 export ZSH_TMUX_AUTOSTART=true
 export ZSH_TMUX_DEFAULT_SESSION_NAME="workspace"
@@ -47,10 +46,11 @@ source ~/.oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 eval "$(zoxide init zsh)"
 
 # Tmuxifier
-export PATH="$HOME/.tmuxifier/bin:$PATH"
+export PATH="$PATH:$HOME/.tmuxifier/bin"
 eval "$(tmuxifier init -)"
 
 export EDITOR="nvim"
 
+export PATH="$PATH:$HOME/.local/bin"
 # Adds alias commands
 source ~/.bash_aliases
