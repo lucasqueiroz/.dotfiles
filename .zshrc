@@ -54,3 +54,4 @@ export EDITOR="nvim"
 export PATH="$PATH:$HOME/.local/bin"
 # Adds alias commands
 source ~/.bash_aliases
+source ~/.common_aliases
