@@ -1,7 +1,0 @@
-import = ["~/.config/alacritty/catppuccin-frappe.toml"]
-
-[window]
-decorations = "None"
-
-[font]
-normal.family = "FiraMono Nerd Font Mono"

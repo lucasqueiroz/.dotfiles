@@ -8,6 +8,10 @@ Uses Stow.
 - Brew
 - Git
 - Curl
+- ZSH
+- ZSH completions
+- ZSH Autosuggestions
+- ZSH Syntax Highlighting
 - FZF
 - Zoxide
 - FZF tab
@@ -17,6 +21,6 @@ Uses Stow.
 - Lazygit
 - Ranger-fm
 - FiraMono Nerd Font Mono
-- Powerlevel10k
+- Oh-my-posh
 - Stow
 - Tmux TPM

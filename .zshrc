@@ -9,12 +9,6 @@ plugins=(git asdf brew zsh-autosuggestions zsh-syntax-highlighting tmux)
 
 source $ZSH/oh-my-zsh.sh
 
-# Enables Powerlevel10k
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -51,7 +45,11 @@ eval "$(tmuxifier init -)"
 
 export EDITOR="nvim"
 
+# Oh-my-posh
+eval "$(oh-my-posh init zsh --config '~/.oh-my-posh.toml')"
+
 export PATH="$PATH:$HOME/.local/bin"
+
 # Adds alias commands
 source ~/.bash_aliases
 source ~/.common_aliases
