@@ -51,5 +51,5 @@ eval "$(oh-my-posh init zsh --config '~/.oh-my-posh.toml')"
 export PATH="$PATH:$HOME/.local/bin"
 
 # Adds alias commands
-source ~/.bash_aliases
 source ~/.common_aliases
+source ~/.bash_aliases

@@ -13,3 +13,11 @@ alias tmnw="tmuxifier new-window $@"
 alias tml="tmuxifier load-session $@"
 
 export HOMEBREW_NO_ENV_HINTS=true
+
+function dsa() {
+    docker stop $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
+    docker container prune -f
+    docker volume prune -f
+    docker image prune -f
+}
