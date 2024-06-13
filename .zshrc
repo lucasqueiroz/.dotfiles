@@ -1,6 +1,6 @@
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
-export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOSTART=false
 export ZSH_TMUX_DEFAULT_SESSION_NAME="workspace"
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -49,6 +49,15 @@ export EDITOR="nvim"
 eval "$(oh-my-posh init zsh --config '~/.oh-my-posh.toml')"
 
 export PATH="$PATH:$HOME/.local/bin"
+
+# NPM
+NPM_PACKAGES="${HOME}/.npm-packages"
+
+export PATH="$PATH:$NPM_PACKAGES/bin"
+
+# Preserve MANPATH if you already defined it somewhere in your config.
+# Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
 # Adds alias commands
 source ~/.common_aliases
