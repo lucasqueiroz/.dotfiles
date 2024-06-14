@@ -1,13 +1,25 @@
 local wezterm = require("wezterm")
-
 local config = wezterm.config_builder()
 
 config.color_scheme = "Catppuccin Frappe"
 
+local is_darwin = function()
+	return wezterm.target_triple:find("darwin") ~= nil
+end
+
+-- Font
 config.font = wezterm.font("FiraMono Nerd Font Mono")
 config.font_size = 12.0
-config.window_decorations = "NONE"
+if is_darwin() then
+	config.font_size = 14.0
+end
 
+-- Window decorations
+if not is_darwin() then
+	config.window_decorations = "NONE"
+end
+
+-- Tab bar
 config.use_fancy_tab_bar = false
 
 config.window_padding = {
@@ -27,18 +39,18 @@ config.colors = {
 
 config.tab_max_width = 50
 
-function get_formatted_process_name(tab)
+local get_formatted_process_name = function(tab)
 	return string.gsub(tab.active_pane.foreground_process_name, "(.*[/\\])(.*)", "%2")
 end
 
-function get_formatted_working_dir(pane)
+local get_formatted_working_dir = function(pane)
 	local current_dir = pane:get_current_working_dir().path
 	local HOME_DIR = string.format("file://%s", os.getenv("HOME"))
 
 	return current_dir == HOME_DIR and "." or string.gsub(current_dir, "(.*[/\\])(.*)", "%2")
 end
 
-function tab_title(tab)
+local tab_title = function(tab)
 	local title = tab.tab_title
 	if title and #title > 0 then
 		return title
