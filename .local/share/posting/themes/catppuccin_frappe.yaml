@@ -1,0 +1,15 @@
+name: catppuccin_frappe
+primary: '#8caaee'
+secondary: '#e5c890'
+accent: '#f4b8e4'
+background: '#303446'
+surface: '#414559'
+error: '#e78284'
+warning: '#ef9f76'
+success: '#a6d189'
+panel: '#51576d'
+dark: true
+
+author: Catppuccin
+description: Soothing pastel theme for the high-spirited!
+homepage: https://github.com/catppuccin/catppuccin
