@@ -29,6 +29,10 @@ git config --global user.signingkey ~/.ssh/id_ed25519.pub
 git config --global user.name "Lucas Queiroz"
 git config --global user.email "me@lucasqueiroz.dev"
 
+# Install 1Password
+brew install --cask 1password
+echo "Configure GitHub SSH!"
+
 # Install WezTerm
 brew install --cask wezterm
 
