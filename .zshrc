@@ -39,10 +39,6 @@ source ~/.oh-my-zsh/custom/plugins/fzf-tab/fzf-tab.plugin.zsh
 # Zoxide
 eval "$(zoxide init zsh)"
 
-# Tmuxifier
-export PATH="$PATH:$HOME/.tmuxifier/bin"
-eval "$(tmuxifier init -)"
-
 export EDITOR="nvim"
 
 # Oh-my-posh
