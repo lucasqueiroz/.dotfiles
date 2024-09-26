@@ -7,7 +7,6 @@ xcode-select --install
 brew install gnupg
 brew install pinentry-mac
 echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
-killall gpg-agent
 
 # Setup SSH
 ssh-keygen -t ed25519 -C "me@lucasqueiroz.dev"
