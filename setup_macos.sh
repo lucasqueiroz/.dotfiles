@@ -78,6 +78,9 @@ brew install stow
 # Install tmux
 brew install tmux
 
+# Instal EZA
+brew install eza
+
 # Install VSCode
 brew install --cask visual-studio-code
 
