@@ -81,6 +81,12 @@ brew install tmux
 # Instal EZA
 brew install eza
 
+# Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+
+# Install NPM
+nvm install node
+
 # Install VSCode
 brew install --cask visual-studio-code
 
