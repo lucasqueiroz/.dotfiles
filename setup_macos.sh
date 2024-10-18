@@ -93,5 +93,8 @@ brew install --cask visual-studio-code
 # Make projects folder
 mkdir ~/Documents/projects
 
+# Install pyenv
+brew install pyenv
+
 # Clone .dotfiles
 git clone git@github.com:lucasqueiroz/.dotfiles.git
