@@ -96,5 +96,10 @@ mkdir ~/Documents/projects
 # Install pyenv
 brew install pyenv
 
+# Install ASDF
+brew install coreutils
+brew install asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+
 # Clone .dotfiles
 git clone git@github.com:lucasqueiroz/.dotfiles.git
