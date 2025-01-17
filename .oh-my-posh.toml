@@ -1,89 +1,85 @@
-"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+version = 3
 final_space = true
-version = 2
+
+[palette]
+  base = '#303446'
+  blue = '#8caaee'
+  crust = '#232634'
+  flamingo = '#eebebe'
+  green = '#a6d189'
+  lavender = '#babbf1'
+  mantle = '#292c3c'
+  maroon = '#ea999c'
+  mauve = '#ca9ee6'
+  overlay_0 = '#737994'
+  overlay_1 = '#838ba7'
+  overlay_2 = '#949cbb'
+  peach = '#ef9f76'
+  pink = '#f4b8e4'
+  red = '#e78284'
+  rosewater = '#f2d5cf'
+  sapphire = '#85c1dc'
+  sky = '#99d1db'
+  subtext_0 = '#a5adce'
+  subtext_1 = '#b5bfe2'
+  surface_0 = '#414559'
+  surface_1 = '#51576d'
+  surface_2 = '#626880'
+  teal = '#81c8be'
+  text = '#c6d0f5'
+  yellow = '#e5c890'
 
 [[blocks]]
-type = "prompt"
-alignment = "left"
+  type = 'prompt'
+  alignment = 'left'
 
   [[blocks.segments]]
-  type = "path"
-  style = "plain"
-  foreground = "p:blue"
-  template = "{{ .Path }}"
+    style = 'plain'
+    template = '{{ .Path }}'
+    foreground = 'p:blue'
+    type = 'path'
 
     [blocks.segments.properties]
-    style = "full"
+      style = 'full'
 
   [[blocks.segments]]
-  type = "git"
-  style = "plain"
-  foreground = "p:surface_2"
-  template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{ if gt .Behind 0 }} ⇣{{ end }}{{ if gt .Ahead 0 }} ⇡{{ end }}"
+    style = 'plain'
+    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{ if gt .Behind 0 }} ⇣{{ end }}{{ if gt .Ahead 0 }} ⇡{{ end }}'
+    foreground = 'p:surface_2'
+    type = 'git'
 
     [blocks.segments.properties]
-    branch_icon = ''
-    commit_icon = '@'
-    fetch_status = true
+      branch_icon = ''
+      commit_icon = '@'
+      fetch_status = true
 
   [[blocks.segments]]
-  type = "python"
-  style = "plain"
-  foreground = "p:surface_2"
-  template = " {{ if .Venv }} {{ .Venv }}{{end}}"
+    style = 'plain'
+    template = ' {{ if .Venv }} {{ .Venv }}{{end}}'
+    foreground = 'p:surface_2'
+    type = 'python'
 
 [[blocks]]
-type = "rprompt"
-overflow = "hidden"
+  type = 'rprompt'
+  overflow = 'hidden'
 
   [[blocks.segments]]
-  type = "executiontime"
-  style = "plain"
-  foreground = "p:yellow"
-  template = "{{ .FormattedMs }}"
+    style = 'plain'
+    template = '{{ .FormattedMs }}'
+    foreground = 'p:yellow'
+    type = 'executiontime'
 
     [blocks.segments.properties]
-    threshold = 5000
+      threshold = 5000
 
 [[blocks]]
-  type = "prompt"
-  alignment = "left"
+  type = 'prompt'
+  alignment = 'left'
   newline = true
 
   [[blocks.segments]]
-    type = "text"
-    style = "plain"
-    foreground_templates = [
-      "{{if gt .Code 0}}p:red{{end}}",
-      "{{if eq .Code 0}}p:mauve{{end}}",
-    ]
-    background = "transparent"
-    template = "❯"
-
-[palette]
-rosewater = "#f2d5cf"
-flamingo = "#eebebe"
-pink = "#f4b8e4"
-mauve = "#ca9ee6"
-red = "#e78284"
-maroon = "#ea999c"
-peach = "#ef9f76"
-yellow = "#e5c890"
-green = "#a6d189"
-teal = "#81c8be"
-sky = "#99d1db"
-sapphire = "#85c1dc"
-blue = "#8caaee"
-lavender = "#babbf1"
-text = "#c6d0f5"
-subtext_0 = "#a5adce"
-subtext_1 = "#b5bfe2"
-overlay_0 = "#737994"
-overlay_1 = "#838ba7"
-overlay_2 = "#949cbb"
-surface_0 = "#414559"
-surface_1 = "#51576d"
-surface_2 = "#626880"
-base = "#303446"
-mantle = "#292c3c"
-crust = "#232634"
+    style = 'plain'
+    template = '❯'
+    background = 'transparent'
+    type = 'text'
+    foreground_templates = ['{{if gt .Code 0}}p:red{{end}}', '{{if eq .Code 0}}p:mauve{{end}}']

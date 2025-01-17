@@ -101,5 +101,8 @@ brew install coreutils
 brew install asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 
+# Install Delta
+brew install git-delta
+
 # Clone .dotfiles
 git clone git@github.com:lucasqueiroz/.dotfiles.git
