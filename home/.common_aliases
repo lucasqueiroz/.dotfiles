@@ -11,6 +11,7 @@ alias tmew="tmuxifier edit-window $@"
 alias tmns="tmuxifier new-session $@"
 alias tmnw="tmuxifier new-window $@"
 alias tml="tmuxifier load-session $@"
+alias cat="bat $@"
 
 export HOMEBREW_NO_ENV_HINTS=true
 
