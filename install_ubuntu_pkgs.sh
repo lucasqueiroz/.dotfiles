@@ -69,5 +69,8 @@ nix-env -iA nixpkgs.lazygit
 # Lazydocker
 nix-env -iA nixpkgs.lazydocker
 
+# Solaar
+nix-env -iA nixpkgs.solaar
+
 # NordVPN
 echo "Install NordVPN, until they have a better installation method..."
