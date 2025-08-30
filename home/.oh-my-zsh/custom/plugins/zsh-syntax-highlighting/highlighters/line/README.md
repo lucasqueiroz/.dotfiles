@@ -1,1 +1,0 @@
-../../../../../../../../../../.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/docs/highlighters/line.md

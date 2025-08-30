@@ -61,5 +61,20 @@ export NVM_DIR="$HOME/.nvm"
 export ZSH_THEME=""
 autoload -U promptinit; promptinit
 prompt pure
+zstyle :prompt:pure:prompt:success color green
+zstyle :prompt:pure:prompt:error color red
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+### set PATH so it includes user's nix bin if it exists
+if [ -d "$HOME/.nix-profile/bin" ] ; then
+    PATH="$HOME/.nix-profile/bin:$PATH"
+fi
+
+### set XDG_DATA_DIR so it includes user's nix share if it exists
+if [ -d "$HOME/.nix-profile/share" ] ; then
+    XDG_DATA_DIRS="$HOME/.nix-profile/share:$XDG_DATA_DIRS"
+fi
+
+export PATH=/usr/local/cuda-13.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-13.0/lib64:$LD_LIBRARY_PATH
