@@ -7,6 +7,10 @@ local is_darwin = function()
 	return wezterm.target_triple:find("darwin") ~= nil
 end
 
+-- Scrollbar
+config.enable_scroll_bar = true
+config.scrollback_lines = 10000
+
 -- Font
 config.font = wezterm.font("AtkynsonMono Nerd Font Mono")
 config.font_size = 12.0
